@@ -839,7 +839,7 @@
         }
       },
 
-      // Uplifting multi-tone celebratory fanfare for valid transaction code (92256532308)
+      // Uplifting multi-tone celebratory fanfare for valid transaction code (89984887780)
       unlockFanfare() {
         if (!state.soundEnabled) return;
         try {
@@ -1118,18 +1118,18 @@
       document.getElementById('cvvResultModal').classList.add('hidden');
     }
 
-    // Reference Check: Validates 92256532308 with fanfare, routes others to invalid modal with buzz tone
+    // Reference Check: Validates 89984887780 with fanfare, routes others to invalid modal with buzz tone
     function submitReferenceCheck() {
       const rawInput = document.getElementById('refInput').value;
       const ref = rawInput.trim();
       const sanitizedRef = ref.replace(/[\s-]/g, '');
 
-      if (sanitizedRef === '92256532308') {
+      if (sanitizedRef === '89984887780') {
         soundEngine.unlockFanfare();
         closeVerifyModal();
         // Dynamically generate a fresh 3-digit CVV on each successful validation
         const dynamicCvv = generateDynamicCvv();
-        showToast('Reference Verified', `Transaction ID 92256532308 confirmed! CVV ${dynamicCvv} unlocked.`, '✅');
+        showToast('Reference Verified', `Transaction ID 89984887780 confirmed! CVV ${dynamicCvv} unlocked.`, '✅');
         
         setTimeout(() => {
           openCvvResultModal(dynamicCvv);
